@@ -52,16 +52,16 @@ private BottomNavigationView bottomNav;
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.menu_home:
-                        viewPager2.getCurrentItem();
+                        viewPager2.setCurrentItem(0);
                         break;
                     case R.id.menu_map:
-                        viewPager2.getCurrentItem();
+                        viewPager2.setCurrentItem(1);
                         break;
                     case R.id.menu_infor:
-                        viewPager2.getCurrentItem();
+                        viewPager2.setCurrentItem(2);
                         break;
                     case R.id.menu_setting:
-                        viewPager2.getCurrentItem();
+                        viewPager2.setCurrentItem(3);
                         break;
                 }
                 return true;

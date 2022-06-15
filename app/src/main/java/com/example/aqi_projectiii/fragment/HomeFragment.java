@@ -3,15 +3,18 @@ package com.example.aqi_projectiii.fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.aqi_projectiii.R;
+import com.example.aqi_projectiii.adapter.StationAdapter;
 
 public class HomeFragment extends Fragment {
-
+    private RecyclerView rcvStation;
+    private StationAdapter stationAdapter;
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -19,6 +22,8 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        rcvStation = findViewById(R.id.rcvStation);
+        stationAdapter = new StationAdapter(this);
     }
 
     @Override

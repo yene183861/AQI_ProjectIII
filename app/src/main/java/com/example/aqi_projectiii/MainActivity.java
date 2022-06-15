@@ -2,11 +2,13 @@ package com.example.aqi_projectiii;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.aqi_projectiii.adapter.StationAdapter;
 import com.example.aqi_projectiii.adapter.ViewpagerAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -14,6 +16,7 @@ import com.google.android.material.navigation.NavigationBarView;
 public class MainActivity extends AppCompatActivity {
 private ViewPager2 viewPager2;
 private BottomNavigationView bottomNav;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -14,7 +14,7 @@
             android:gravity="center"
             android:orientation="vertical">
             <TextView
-                android:id="@+id/airState"
+                android:id="@+id/txtAirState"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Healthy"
@@ -29,19 +29,6 @@
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="5dp"
                 android:src="@drawable/clean_air"/>
-            <TextView
-                android:id="@+id/valueAQI"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="value"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="AQI"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,6 +38,7 @@
             android:layout_alignBaseline="@+id/layoutAQI"
             android:padding="10dp">
             <TextView
+                android:id="@+id/txtLocation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="location"
@@ -71,6 +59,7 @@
                         android:layout_height="40dp"
                         android:src="@drawable/temperature"/>
                     <TextView
+                        android:id="@+id/txtValueTemp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="15.1 °C"
@@ -86,6 +75,7 @@
                         android:layout_height="40dp"
                         android:src="@drawable/drop"/>
                     <TextView
+                        android:id="@+id/txtValueHumi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="15.1 %"
@@ -93,8 +83,26 @@
                         android:textStyle="bold"/>
                 </LinearLayout>
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/drop" />
+
+                <TextView
+                    android:id="@+id/txtValueAQI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2.5 PMM"
+                    android:textStyle="bold"/>
+            </LinearLayout>
             <TextView
-                android:id="@+id/time"
+                android:id="@+id/txtTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Thoi gian do du lieu"

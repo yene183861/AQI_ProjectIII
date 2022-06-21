@@ -1,6 +1,7 @@
 package com.example.aqi_projectiii.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,12 +9,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.aqi_projectiii.R;
-import com.example.aqi_projectiii.localdb.Station;
+import com.example.aqi_projectiii.model.Station;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class StationAdapter extends RecyclerView.Adapter<StationAdapter.StationViewHolder> {
     private Context context;
@@ -41,10 +48,34 @@ public class StationAdapter extends RecyclerView.Adapter<StationAdapter.StationV
         if (station == null) {
             return;
         }
+//        DateFormat df = new SimpleDateFormat("EEE, d MMM yyyy, HH:mm");
+//        String date = df.format(station.getTime());
         holder.txtLocation.setText(station.getLocation());
         holder.txtValueAQI.setText(station.getPpm() + " ppm");
         holder.txtValueHumi.setText(station.getHumi() + " %");
         holder.txtValueTemp.setText(station.getTemp() + " °C");
+
+        //Date time = Calendar.getInstance().getTime();
+//        String time = "";
+//        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH);
+//        SimpleDateFormat newFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//        try {
+//            Log.e("time", station.getDatetime().toString());
+//            Date
+//            time = newFormat.parse(station.getDatetime().toString()));
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
+        holder.txtTime.setText(station.getDatetime().toString());
+        holder.layoutItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onClickGoToDetail(station);
+            }
+        });
+    }
+
+    private void onClickGoToDetail(Station station) {
     }
 
     @Override
@@ -58,10 +89,11 @@ public class StationAdapter extends RecyclerView.Adapter<StationAdapter.StationV
     public class StationViewHolder extends RecyclerView.ViewHolder {
         private TextView txtAirState, txtValueAQI, txtLocation, txtValueTemp, txtValueHumi, txtTime;
         private ImageView image;
+        private CardView layoutItem;
 
         public StationViewHolder(@NonNull View itemView) {
             super(itemView);
-
+            layoutItem = itemView.findViewById(R.id.layoutItem);
             txtAirState = itemView.findViewById(R.id.txtAirState);
             txtValueAQI = itemView.findViewById(R.id.txtValueAQI);
             txtLocation = itemView.findViewById(R.id.txtLocation);

@@ -3,16 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/drawable/ic_add.xml" value="0.111" />
         <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/drawable/ic_home.xml" value="0.2255" />
         <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/drawable/ic_infor.xml" value="0.2255" />
         <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/drawable/ic_map.xml" value="0.2255" />
         <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/drawable/ic_setting.xml" value="0.2255" />
         <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/layout/fragment_infor.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/layout/fragment_map.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/layout/fragment_setting.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/layout/item_measuring_station.xml" value="0.14960629921259844" />
+        <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/layout/item_station.xml" value="0.264" />
         <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/menu/menu_bottom_nav.xml" value="0.25416666666666665" />
       </map>
     </option>

@@ -4,11 +4,12 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 
+import java.io.Serializable;
 import java.util.Date;
 
-@Entity
-public class Station {
-    @PrimaryKey(autoGenerate = true)
+//@Entity
+public class Station implements Serializable {
+    //@PrimaryKey(autoGenerate = true)
     private int id;
     private String deviceId;
     private double temp;

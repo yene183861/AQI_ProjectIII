@@ -3,9 +3,9 @@ package com.example.aqi_projectiii.model;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity
+//@Entity
 public class User {
-    @PrimaryKey(autoGenerate = true)
+    //@PrimaryKey(autoGenerate = true)
     private int id;
     private String username;
     private String password;

@@ -4,11 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/drawable/ic_add.xml" value="0.111" />
+        <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/drawable/ic_add_station.xml" value="0.1" />
         <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/drawable/ic_home.xml" value="0.2255" />
         <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/drawable/ic_infor.xml" value="0.2255" />
         <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/drawable/ic_map.xml" value="0.2255" />
         <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/drawable/ic_setting.xml" value="0.2255" />
+        <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/layout/activity_detail2.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/layout/fragment_detail.xml" value="0.1140625" />
         <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/layout/fragment_infor.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Leyen/AndroidStudioProjects/AQI_ProjectIII/app/src/main/res/layout/fragment_map.xml" value="0.25416666666666665" />

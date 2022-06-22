@@ -3,8 +3,11 @@ package com.example.aqi_projectiii.adapter;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+import com.example.aqi_projectiii.R;
 import com.example.aqi_projectiii.fragment.HomeFragment;
 import com.example.aqi_projectiii.fragment.InforFragment;
 import com.example.aqi_projectiii.fragment.MapFragment;
@@ -14,6 +17,7 @@ public class ViewpagerAdapter extends FragmentStateAdapter {
     public ViewpagerAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
     }
+
 
     @NonNull
     @Override

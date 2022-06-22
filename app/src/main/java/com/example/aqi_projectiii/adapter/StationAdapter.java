@@ -1,7 +1,7 @@
 package com.example.aqi_projectiii.adapter;
 
 import android.content.Context;
-import android.util.Log;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,15 +12,11 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.aqi_projectiii.DetailActivity;
 import com.example.aqi_projectiii.R;
 import com.example.aqi_projectiii.model.Station;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 public class StationAdapter extends RecyclerView.Adapter<StationAdapter.StationViewHolder> {
     private Context context;
@@ -51,7 +47,7 @@ public class StationAdapter extends RecyclerView.Adapter<StationAdapter.StationV
 //        DateFormat df = new SimpleDateFormat("EEE, d MMM yyyy, HH:mm");
 //        String date = df.format(station.getTime());
         holder.txtLocation.setText(station.getLocation());
-        holder.txtValueAQI.setText(station.getPpm() + " ppm");
+        holder.txtValueAQI.setText(station.getCo2() + " ppm");
         holder.txtValueHumi.setText(station.getHumi() + " %");
         holder.txtValueTemp.setText(station.getTemp() + " °C");
 
@@ -76,6 +72,9 @@ public class StationAdapter extends RecyclerView.Adapter<StationAdapter.StationV
     }
 
     private void onClickGoToDetail(Station station) {
+        Intent intent = new Intent(context.getApplicationContext(), DetailActivity.class);
+        intent.putExtra("station", station);
+        context.startActivities(new Intent[]{intent});
     }
 
     @Override

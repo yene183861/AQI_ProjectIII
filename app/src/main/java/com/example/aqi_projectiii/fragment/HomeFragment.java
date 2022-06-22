@@ -36,10 +36,10 @@ import java.util.Locale;
 public class HomeFragment extends Fragment{
     private RecyclerView rcvStation;
     private StationAdapter stationAdapter;
-    String clientId = MqttClient.generateClientId();
-    MqttAndroidClient client =
-            new MqttAndroidClient(this.getActivity().getApplicationContext(), "tcp://broker.hivemq.com:1883",
-                    clientId);
+//    String clientId = MqttClient.generateClientId();
+//    MqttAndroidClient client =
+//            new MqttAndroidClient(this.getActivity().getApplicationContext(), "tcp://broker.hivemq.com:1883",
+//                    clientId);
     //private List<Station> listStation;
 //    Calendar c = Calendar.getInstance();
 //    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -67,8 +67,8 @@ public class HomeFragment extends Fragment{
         stationAdapter = new StationAdapter(view.getContext());
         stationAdapter.setData(getListStation());
 
-        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(view.getContext(), DividerItemDecoration.VERTICAL);
-        rcvStation.addItemDecoration(itemDecoration);
+//        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(view.getContext(), DividerItemDecoration.VERTICAL);
+//        rcvStation.addItemDecoration(itemDecoration);
         rcvStation.setAdapter(stationAdapter);
        return view;
     }
@@ -94,56 +94,56 @@ public class HomeFragment extends Fragment{
         return list;
     }
 
-    private void connectMQTT(){
-        String username = "project3";
-        String password = "pass_project3";
+//    private void connectMQTT(){
+//        String username = "project3";
+//        String password = "pass_project3";
+//
+//        try {
+//            MqttConnectOptions options = new MqttConnectOptions();
+//            options.setUserName(username);
+//            options.setPassword(password.toCharArray());
+//            IMqttToken token = client.connect(options);
+//            token.setActionCallback(new IMqttActionListener() {
+//                @Override
+//                public void onSuccess(IMqttToken asyncActionToken) {
+//                    // We are connected
+//                    Log.d("MQTT", "onSuccess");
+//                }
+//
+//                @Override
+//                public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
+//                    // Something went wrong e.g. connection timeout or firewall problems
+//                    Log.d("MQTT", "onFailure");
+//
+//                }
+//            });
+//        } catch (MqttException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
-        try {
-            MqttConnectOptions options = new MqttConnectOptions();
-            options.setUserName(username);
-            options.setPassword(password.toCharArray());
-            IMqttToken token = client.connect(options);
-            token.setActionCallback(new IMqttActionListener() {
-                @Override
-                public void onSuccess(IMqttToken asyncActionToken) {
-                    // We are connected
-                    Log.d("MQTT", "onSuccess");
-                }
-
-                @Override
-                public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
-                    // Something went wrong e.g. connection timeout or firewall problems
-                    Log.d("MQTT", "onFailure");
-
-                }
-            });
-        } catch (MqttException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void subscribe(String topic){
-        int qos = 1;
-        try {
-            IMqttToken subToken = client.subscribe(topic, qos);
-            subToken.setActionCallback(new IMqttActionListener() {
-                @Override
-                public void onSuccess(IMqttToken asyncActionToken) {
-                    // The message was published
-                }
-
-                @Override
-                public void onFailure(IMqttToken asyncActionToken,
-                                      Throwable exception) {
-                    // The subscription could not be performed, maybe the user was not
-                    // authorized to subscribe on the specified topic e.g. using wildcards
-
-                }
-            });
-        } catch (MqttException e) {
-            e.printStackTrace();
-        }
-    }
+//    private void subscribe(String topic){
+//        int qos = 1;
+//        try {
+//            IMqttToken subToken = client.subscribe(topic, qos);
+//            subToken.setActionCallback(new IMqttActionListener() {
+//                @Override
+//                public void onSuccess(IMqttToken asyncActionToken) {
+//                    // The message was published
+//                }
+//
+//                @Override
+//                public void onFailure(IMqttToken asyncActionToken,
+//                                      Throwable exception) {
+//                    // The subscription could not be performed, maybe the user was not
+//                    // authorized to subscribe on the specified topic e.g. using wildcards
+//
+//                }
+//            });
+//        } catch (MqttException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
 
 }
